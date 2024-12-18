@@ -24,6 +24,7 @@ figure, blockquote, dl, dd {
 /* Remove default list styles */
 :is(ul, ol) {
   list-style-type: "";
+  padding: 0;
 }
 
 /* Adjust default line height */
@@ -251,4 +252,10 @@ textarea:not([rows]) {
 
 .pris {
   font-weight: var(--fw-medium);
+}
+
+.kontakt-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
