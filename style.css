@@ -122,8 +122,14 @@ textarea:not([rows]) {
   :root {
      /* Primitive properties */
 
-     --clr-blue: hsl(216, 61%, 29%);
+     --clr-blue: #1d4177;
      --clr-blue-dark: hsl(245, 80%, 19%);
+
+     --clr-dark-red: hsl(350, 73%, 23%);
+     --clr-brown: hsl(28, 37%, 23%);
+     --clr-dark-brown: hsl(36, 10%, 10%);
+     --clr-almost-white: hsl(0, 0%, 91%);
+     --clr-very-light-blue: hsl(202, 58%, 88%);
 
      --ff-sans-serif: 'Inter', system-ui, sans-serif;
 
@@ -202,8 +208,13 @@ textarea:not([rows]) {
   
 .meny {
   text-transform: uppercase;
+  background-color: var(--clr-dark-brown);
   color: var(--clr-primary-100);
+  color: var(--clr-very-light-blue);
+  padding-block-start: 40px;
   padding-block-end: 50px;
+  padding-inline: 20px;
+  border-radius: 10px;
 }
 
 .meny-heading {
