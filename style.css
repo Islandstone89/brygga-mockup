@@ -191,6 +191,7 @@ textarea:not([rows]) {
   justify-content: center;
   font-weight: var(--fw-bold);
   color: var(--clr-primary-100);
+  text-transform: uppercase;
 }
 
 .nav__link {
