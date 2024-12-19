@@ -130,7 +130,7 @@ textarea:not([rows]) {
      --clr-brown: hsl(28, 27%, 23%);
      --clr-dark-brown: hsl(36, 5%, 10%);
      --clr-almost-white: hsl(0, 0%, 91%);
-     --clr-very-light-blue: hsl(202, 58%, 88%);
+     --clr-very-light-blue: hsl(202, 58%, 92%);
 
      --ff-sans-serif: 'Inter', system-ui, sans-serif;
 
@@ -159,6 +159,11 @@ textarea:not([rows]) {
      --size-72px: 72px;
      --size-76px: 76px;
      --size-80px: 80px;
+     --size-84px: 84px;
+     --size-88px: 88px;
+     --size-92px: 92px;
+     --size-96px: 96px;
+     --size-100px: 100px;
 
      /* Semantic properties */
 
@@ -195,12 +200,18 @@ textarea:not([rows]) {
      --size-900: var(--size-72px);
      --size-950: var(--size-76px);
      --size-1000: var(--size-80px);
+
+     --size-1050: var(--size-84px);
+     --size-1100: var(--size-88px);
+     --size-1150: var(--size-92px);
+     --size-1200: var(--size-96px);
+     --size-1250: var(--size-100px);
   }
 
   /* UTILITIES */
 
   .flow {
-    --flow-space: 24px;
+    --flow-space: var(--size-300);
   }
 
   .flow > * + * {
@@ -221,6 +232,11 @@ body {
   font-weight: var(--fw-medium);
 }
 
+.container {
+  max-width: 90rem;
+  margin-inline: auto;
+}
+
 
 @keyframes reveal {
   from { opacity: 0; clip-path: inset(0% 60% 0% 50%); }
@@ -231,11 +247,10 @@ body {
 /* HEADER */
 
 .header {
-  padding-inline: var(--size-250);
-  max-width: 80rem;
   margin-inline: auto;
   padding-block-start: var(--size-500);
   padding-block-end: var(--size-500);
+  padding-inline: clamp(1.5rem, -2.66rem + 20.83vw, 14rem);
 }
 
 .logo-header {
@@ -267,11 +282,8 @@ body {
 /* INTRO */
 
 .intro {
-  padding-inline: var(--size-250);
-  max-width: 80rem;
   margin-inline: auto;
-
-  padding-inline: clamp(1.5rem, -1.5000rem + 15.0000vw, 12rem);
+  padding-inline: clamp(1.5rem, -2.66rem + 20.83vw, 14rem);
 }
 
 .intro__image {
@@ -289,12 +301,8 @@ body {
   padding-block-start: var(--size-1000);
   padding-block-end: var(--size-1000);
   background-color: var(--clr-very-light-blue);
-
-  padding-inline: var(--size-250);
-  max-width: 80rem;
   margin-inline: auto;
-
-  padding-inline: clamp(1.5rem, -1.5000rem + 15.0000vw, 12rem);
+  padding-inline: clamp(1.5rem, -2.66rem + 20.83vw, 14rem);
 }
 
 .sendeskjema__tabell {
@@ -334,20 +342,14 @@ tbody tr:nth-child(even) {
   text-transform: uppercase;
   background-color: var(--clr-dark-brown);
   color: var(--clr-very-light-blue);
-  padding-block-start: var(--size-500);
-  padding-block-end: var(--size-600);
-  padding-inline: var(--size-250);
-  border-radius: var(--size-100);
-
-  padding-inline: var(--size-250);
-  max-width: 80rem;
+  padding-block-start: var(--size-1000);
+  padding-block-end: var(--size-900);
   margin-inline: auto;
-
-  padding-inline: clamp(1.5rem, -1.5000rem + 15.0000vw, 12rem);
+  padding-inline: clamp(1.5rem, -2.66rem + 20.83vw, 14rem);
 }
 
 .meny-container {
-  --flow-space: var(--size-600);
+  --flow-space: var(--size-800);
 }
 
 .meny-heading {
@@ -358,7 +360,7 @@ tbody tr:nth-child(even) {
   --min-width: 300px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min-width)), 1fr));
-  gap: var(--size-500);
+  gap: var(--size-800);
 }
 
 .meny-kategori-heading {
@@ -383,18 +385,13 @@ tbody tr:nth-child(even) {
 /* BILDER */
 
 .bilder {
-  padding-block-start: var(--size-500);
-
-  padding-inline: var(--size-250);
-  max-width: 80rem;
+  padding-block-start: var(--size-900);
   margin-inline: auto;
-
-  padding-inline: clamp(1.5rem, -1.5000rem + 15.0000vw, 12rem);
-
-
+  padding-inline: clamp(1.5rem, -2.66rem + 20.83vw, 14rem);
 }
 
 .galleri {
+  --flow-space: var(--size-500);
   display: flex;
   flex-direction: column;
   gap: var(--size-500);
@@ -410,15 +407,9 @@ tbody tr:nth-child(even) {
   gap: var(--size-500);
   padding-block-start: var(--size-1000);
   padding-block-end: var(--size-500);
-
-  padding-inline: var(--size-250);
   max-width: 80rem;
   margin-inline: auto;
-
-  @media (width > 40rem) {
-    padding-inline: var(--size-1000);
-    padding-inline: 200px;
-  }
+  padding-inline: clamp(1.5rem, -2.66rem + 20.83vw, 14rem);
 
 }
 
@@ -447,5 +438,3 @@ tbody tr:nth-child(even) {
   --flow-space: 6px;
   letter-spacing: .05em;
 }
-
-
