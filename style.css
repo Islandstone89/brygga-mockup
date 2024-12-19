@@ -218,15 +218,22 @@ body {
   font-family: var(--ff-primary);
   text-align: center;
   color: var(--clr-primary-100);
+  font-weight: var(--fw-medium);
 }
 
-.container {
-  padding-inline: var(--size-250);
-  max-width: 50rem;
-  margin-inline: auto;
+
+@keyframes reveal {
+  from { opacity: 0; clip-path: inset(0% 60% 0% 50%); }
+  to { opacity: 1; clip-path: inset(0% 0% 0% 0%); }
 }
+
+
+/* HEADER */
 
 .header {
+  padding-inline: var(--size-250);
+  max-width: 80rem;
+  margin-inline: auto;
   padding-block-start: var(--size-500);
   padding-block-end: var(--size-500);
 }
@@ -256,21 +263,38 @@ body {
   }
 }
 
+
 /* INTRO */
 
-.intro__image {
-  --flow-space: var(--size-500);
+.intro {
+  padding-inline: var(--size-250);
+  max-width: 80rem;
+  margin-inline: auto;
+
+  padding-inline: clamp(1.5rem, -1.5000rem + 15.0000vw, 12rem);
 }
 
-.tagline {
-  font-weight: var(--fw-medium);
+.intro__image {
+  --flow-space: var(--size-800);
+
+  animation: auto linear reveal both;
+  animation-timeline: view();
+  animation-range: entry 25% cover 50%;
 }
+
 
 /* SENDESKJEMA */
 
 .sendeskjema {
   padding-block-start: var(--size-1000);
   padding-block-end: var(--size-1000);
+  background-color: var(--clr-very-light-blue);
+
+  padding-inline: var(--size-250);
+  max-width: 80rem;
+  margin-inline: auto;
+
+  padding-inline: clamp(1.5rem, -1.5000rem + 15.0000vw, 12rem);
 }
 
 .sendeskjema__tabell {
@@ -283,7 +307,6 @@ caption {
   margin-block-start: var(--size-250);
   padding-block-end: var(--size-200);
   font-size: 1.25rem;
-  font-weight: var(--fw-medium);
   font-style: italic;
   color: var(--clr-dark-brown);
 }
@@ -307,19 +330,24 @@ tbody tr:nth-child(even) {
 
 /* MENY */
 
-.meny-container {
-  --flow-space: var(--size-600);
-}
-
 .meny {
   text-transform: uppercase;
   background-color: var(--clr-dark-brown);
-  color: var(--clr-primary-100);
   color: var(--clr-very-light-blue);
   padding-block-start: var(--size-500);
   padding-block-end: var(--size-600);
   padding-inline: var(--size-250);
   border-radius: var(--size-100);
+
+  padding-inline: var(--size-250);
+  max-width: 80rem;
+  margin-inline: auto;
+
+  padding-inline: clamp(1.5rem, -1.5000rem + 15.0000vw, 12rem);
+}
+
+.meny-container {
+  --flow-space: var(--size-600);
 }
 
 .meny-heading {
@@ -352,14 +380,18 @@ tbody tr:nth-child(even) {
   gap: var(--size-50);
 }
 
-.pris {
-  font-weight: var(--fw-medium);
-}
-
 /* BILDER */
 
 .bilder {
   padding-block-start: var(--size-500);
+
+  padding-inline: var(--size-250);
+  max-width: 80rem;
+  margin-inline: auto;
+
+  padding-inline: clamp(1.5rem, -1.5000rem + 15.0000vw, 12rem);
+
+
 }
 
 .galleri {
@@ -378,6 +410,16 @@ tbody tr:nth-child(even) {
   gap: var(--size-500);
   padding-block-start: var(--size-1000);
   padding-block-end: var(--size-500);
+
+  padding-inline: var(--size-250);
+  max-width: 80rem;
+  margin-inline: auto;
+
+  @media (width > 40rem) {
+    padding-inline: var(--size-1000);
+    padding-inline: 200px;
+  }
+
 }
 
 .info {
@@ -388,7 +430,6 @@ tbody tr:nth-child(even) {
 
 .opningstider__list {
   line-height: 1.8;
-  font-weight: var(--fw-medium);
 }
 
 .closed {
@@ -400,7 +441,6 @@ tbody tr:nth-child(even) {
   display: flex;
   align-items: center;
   gap: var(--size-100);
-  font-weight: var(--fw-medium);
 }
 
 .telefon {
@@ -409,15 +449,3 @@ tbody tr:nth-child(even) {
 }
 
 
-
-/* @keyframes reveal {
-  from { opacity: 0; clip-path: inset(0% 60% 0% 50%); }
-  to { opacity: 1; clip-path: inset(0% 0% 0% 0%); }
-}
-
-.galleri img {
-  animation: auto linear reveal both;
-  animation-timeline: view();
-  animation-range: entry 25% cover 50%;
-}
- */
