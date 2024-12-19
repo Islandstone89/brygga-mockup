@@ -16,16 +16,194 @@
 
             <nav class="nav">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#" class="nav__link" aria-current="page">Heim</a></li>
-                    <li class="nav__item"><a href="meny.html" class="nav__link">Meny</a></li>
-                    <li class="nav__item"><a href="sendeskjema.html" class="nav__link">Sendeskjema</a></li>
-                    <li class="nav__item"><a href="bilder.html" class="nav__link">Bilder</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Heim</a></li>
+                    <li class="nav__item"><a href="#sectionSendeskjema" class="nav__link">Sendeskjema</a></li>
+                    <li class="nav__item"><a href="#sectionMeny" class="nav__link">Meny</a></li>
+                    <li class="nav__item"><a href="#sectionBilder" class="nav__link">Bilder</a></li>
                 </ul>
             </nav>
         </header><!-- end header -->
 
         <main class="main">
-            <img src="img/meny.jpg" alt="">
+
+            <section class="intro flow" aria-labelledby="mainHeading">
+                <h1 class="main-heading" id="mainHeading">Velkomen til Brygga Sportsbar!</h1>
+
+                <p class="tagline">Midt i hjartet av Ulsteinvik finn du Brygga Sportsbar. Vi opna dørene i 2018, og har blitt ein fast møteplass for unge og eldre i Ulstein kommune og omegn. Enten du vil sjå fotball eller ha deg ei matbit, så er du hjarteleg velkomen til oss!</p>
+
+                <img src="img/brygga2.webp" class="intro__image test" alt="Innside av Brygga Sportsbar. Folk sit rundt fleire bord.">
+            </section><!-- end intro -->
+
+            <section class="sendeskjema" id="sectionSendeskjema" aria-labelledby="sendeskjemaHeading">
+                <h2 class="section__heading sendeskjema__heading" id="sendeskjemaHeading">Sendeskjema</h2>
+
+                <table class="sendeskjema__tabell">
+                    <caption>Veke 45</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="table__heading">Dag</th>
+                            <th scope="col" class="table__heading">Klokkeslett</th>
+                            <th scope="col" class="table__heading">Kamp</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Fredag</td>
+                            <td>21.00</td>
+                            <td>Inter - Roma</td>
+                        </tr>
+                        <tr>
+                            <td>Laurdag</td>
+                            <td>13.30</td>
+                            <td>Liverpool - Everton</td>
+                        </tr>
+                        <tr>
+                            <td>Laurdag</td>
+                            <td>16.00</td>
+                            <td>Middlesbrough - Stoke</td>
+                        </tr>
+                        <tr>
+                            <td>Søndag</td>
+                            <td>15.00</td>
+                            <td>Brentford - Fulham</td>
+                        </tr>
+                        <tr>
+                            <td>Søndag</td>
+                            <td>17.30</td>
+                            <td>Arsenal - Tottenham</td>
+                        </tr>
+                    </tbody>
+                </table><!-- end sendeskjema__tabell -->
+            </section><!-- end sendeskjema -->
+
+            <section class="meny flow" id="sectionMeny" aria-labelledby="menyHeading">
+                <h2 class="section__heading meny__heading" id="menyHeading">Meny</h2>
+
+                <div class="meny-container">
+
+                    <div class="grid">
+    
+                        <section class="meny-kategori meny-kategori-1 flow" aria-labelledby="menyHeading1">
+    
+                            <h2 class="meny-kategori-heading meny-kategori-1-heading" id="menyHeading1">Burgers
+                                <img src="img/burger-hamburger-food-svgrepo-com.svg" alt="">
+                            </h2>
+    
+                            <div class="rettar">
+                                <div class="rett">
+                                    <h3 class="rett-heading">Super Smash Bros</h3>
+                                    <p class="pris">229,-</p>
+                                </div><!-- end rett -->
+    
+                                <div class="rett">
+                                    <h3 class="rett-heading">Brygga Smash</h3>
+                                    <p class="pris">229,-</p>
+                                </div><!-- end rett -->
+                            </div><!-- end rettar -->
+    
+                        </section><!-- end meny-kategori -->
+    
+                        <section class="meny-kategori meny-kategori-2 flow" aria-labelledby="menyHeading2">
+    
+                            <h2 class="meny-kategori-heading meny-kategori-2-heading" id="menyHeading2">Sides
+                                <img src="img/french-fries-svgrepo-com.svg" alt="">
+                            </h2>
+    
+                            <div class="rettar">
+                                <div class="rett">
+                                    <h3 class="rett-heading">Parmasan Fries</h3>
+                                    <p class="pris">149,-</p>
+                                </div><!-- end rett -->
+    
+                                <div class="rett">
+                                    <h3 class="rett-heading">Nachos</h3>
+                                    <p class="pris">209,-</p>
+                                </div><!-- end rett -->
+    
+                                <div class="rett">
+                                    <h3 class="rett-heading">Brudavoll mør</h3>
+                                    <p class="pris">149,-</p>
+                                </div><!-- end rett -->
+    
+                                <div class="rett">
+                                    <h3 class="rett-heading">Buffalo Wings</h3>
+                                    <p class="pris">149,-</p>
+                                </div><!-- end rett -->
+                            </div><!-- end rettar -->
+    
+                        </section><!-- end meny-kategori -->
+    
+                        <section class="meny-kategori meny-kategori-3 flow" aria-labelledby="menyHeading3">
+    
+                            <h2 class="meny-kategori-heading meny-kategori-3-heading" id="menyHeading3">Barnemeny
+                                <img src="img/hot-dog-02-svgrepo-com.svg" alt="">
+                            </h2>
+    
+                            <div class="rettar">
+                                <div class="rett">
+                                    <h3 class="rett-heading">Barneburger</h3>
+                                    <p class="pris">129,-</p>
+                                </div><!-- end rett -->
+    
+                                <div class="rett">
+                                    <h3 class="rett-heading">Søtpotet Fries</h3>
+                                    <p class="pris">87,-</p>
+                                </div><!-- end rett -->
+    
+                                <div class="rett">
+                                    <h3 class="rett-heading">Pommes Frites</h3>
+                                    <p class="pris">87,-</p>
+                                </div><!-- end rett -->
+    
+                                <div class="rett">
+                                    <h3 class="rett-heading">Blekksprutpølse</h3>
+                                    <p class="pris">129,-</p>
+                                </div><!-- end rett -->
+                            </div><!-- end rettar -->
+    
+                        </section><!-- end meny-kategori -->
+    
+                        <section class="meny-kategori meny-kategori-4 flow" aria-labelledby="menyHeading4">
+    
+                            <h2 class="meny-kategori-heading meny-kategori-4-heading" id="menyHeading4">Dips
+                               <img src="img/sauce-ketchup-svgrepo-com.svg" alt="">
+                            </h2>
+    
+                            <div class="rettar">
+                                <div class="rett">
+                                    <h3 class="rett-heading">Garlic Mayo</h3>
+                                    <p class="pris">30,-</p>
+                                </div><!-- end rett -->
+    
+                                <div class="rett">
+                                    <h3 class="rett-heading">Guacamole</h3>
+                                    <p class="pris">35,-</p>
+                                </div><!-- end rett -->
+    
+                                <div class="rett">
+                                    <h3 class="rett-heading">Ranchdressing</h3>
+                                    <p class="pris">30,-</p>
+                                </div><!-- end rett -->
+                            </div><!-- end rettar -->
+    
+                        </section><!-- end meny-kategori -->
+                    </div><!-- end grid -->
+    
+                </div><!-- end meny-container -->
+    
+            </section><!-- end meny -->
+
+            <section class="bilder flow" id="sectionBilder" aria-labelledby="bilderHeading">
+
+                <h2 class="section__heading bilder__heading" id="bilderHeading">Bilder</h2>
+
+                <div class="galleri">
+                    <img src="img/brygga1.webp" alt="Innside av Brygga Sportsbar. Oversikt over lokalet." class="test">
+                    <img src="img/brygga3.jpg" alt="Innside av Brygga Sportsbar. Hoveddisken sett framanfrå.">
+                    <img src="img/brygga4.webp" alt="Innside av Brygga Sportsbar. Avdelinga Fenderen, med fleire fotballplakatar på veggen. ">
+                </div><!-- end galleri -->
+            </section><!-- end bilder -->
+
         </main><!-- end main -->
 
         <footer class="footer">
@@ -34,12 +212,11 @@
             </a>
 
             <div class="info">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3114.813449185849!2d5.843347340375981!3d62.34145122867626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x461721482f0f960d%3A0x29fda1e3afbed578!2sBrygga%20Sportsbar!5e0!3m2!1sen!2sno!4v1734563482908!5m2!1sen!2sno" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                 <div class="opningstider">
                     <h2 class="opningstider__heading">Opningstider</h2>
                     <ul class="opningstider__list">
-                        <li class="opningstider__item">Mandag: stengt</li>
+                        <li class="opningstider__item">Mandag: <span class="closed">Stengt</span></li>
                         <li class="opningstider__item">Tirsdag: 18 - 24</li>
                         <li class="opningstider__item">Onsdag: 18 - 24</li>
                         <li class="opningstider__item">Torsdag: 18 - 24</li>
@@ -49,18 +226,20 @@
                     </ul><!-- end opnignstider__list -->
                 </div><!-- end opningstider -->
 
-                <div class="kontakt">
-                    <h2 class="kontakt__heading">Adresse:</h2>
-                    <p class="kontakt-text">
+                <div class="kontakt flow">
+                    <h2 class="kontakt__heading">Kontakt</h2>
+                    <p class="kontakt-text addresse">
                         <img src="img/home-svgrepo-com.svg" alt=""> Sjøgata 30, 6065 Ulsteinvik
                     </p>
 
-                    <p class="kontakt-text">
-                        <img src="img/phone-svgrepo-com.svg" alt="">Tlf.nr: 91360012
+                    <p class="kontakt-text telefon">
+                        <img src="img/phone-svgrepo-com.svg" alt=""> 91360012
                     </p>
                 </div><!-- end kontakt -->
-            </div><!-- end info -->
 
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3114.813449185849!2d5.843347340375981!3d62.34145122867626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x461721482f0f960d%3A0x29fda1e3afbed578!2sBrygga%20Sportsbar!5e0!3m2!1sen!2sno!4v1734563482908!5m2!1sen!2sno" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div><!-- end info -->
         </footer><!-- end footer -->
     </div><!-- end container -->
 </body>

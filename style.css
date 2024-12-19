@@ -123,12 +123,12 @@ textarea:not([rows]) {
   :root {
      /* Primitive properties */
 
-     --clr-blue: #1d4177;
+     --clr-blue: hsl(216, 61%, 29%);
      --clr-blue-dark: hsl(245, 80%, 19%);
 
      --clr-dark-red: hsl(350, 73%, 23%);
-     --clr-brown: hsl(28, 37%, 23%);
-     --clr-dark-brown: hsl(36, 10%, 10%);
+     --clr-brown: hsl(28, 27%, 23%);
+     --clr-dark-brown: hsl(36, 5%, 10%);
      --clr-almost-white: hsl(0, 0%, 91%);
      --clr-very-light-blue: hsl(202, 58%, 88%);
 
@@ -138,6 +138,27 @@ textarea:not([rows]) {
      --fw-500: 500;
      --fw-700: 700;
      --fw-800: 800;
+
+     --size-4px: 4px;
+     --size-8px: 8px;
+     --size-12px: 12px;
+     --size-16px: 16px;
+     --size-20px: 20px;
+     --size-24px: 24px;
+     --size-28px: 28px;
+     --size-32px: 32px;
+     --size-36px: 36px;
+     --size-40px: 40px;
+     --size-44px: 44px;
+     --size-48px: 48px;
+     --size-52px: 52px;
+     --size-56px: 56px;
+     --size-60px: 60px;
+     --size-64px: 64px;
+     --size-68px: 68px;
+     --size-72px: 72px;
+     --size-76px: 76px;
+     --size-80px: 80px;
 
      /* Semantic properties */
 
@@ -150,12 +171,36 @@ textarea:not([rows]) {
      --fw-medium: var(--fw-500);
      --fw-bold: var(--fw-700);
      --fw-extra-bold: var(--fw-800);
+
+     --size-50: var(--size-4px);
+     --size-100: var(--size-8px);
+     --size-150: var(--size-12px);
+     --size-200: var(--size-16px);
+     --size-250: var(--size-20px);
+
+     --size-300: var(--size-24px);
+     --size-350: var(--size-28px);
+     --size-400: var(--size-32px);
+     --size-450: var(--size-36px);
+     --size-500: var(--size-40px);
+
+     --size-550: var(--size-44px);
+     --size-600: var(--size-48px);
+     --size-650: var(--size-52px);
+     --size-700: var(--size-56px);
+     --size-750: var(--size-60px);
+
+     --size-800: var(--size-64px);
+     --size-850: var(--size-68px);
+     --size-900: var(--size-72px);
+     --size-950: var(--size-76px);
+     --size-1000: var(--size-80px);
   }
 
   /* UTILITIES */
 
   .flow {
-    --flow-space: 20px;
+    --flow-space: 24px;
   }
 
   .flow > * + * {
@@ -165,30 +210,37 @@ textarea:not([rows]) {
 
   /* GENERAL STYLING */
 
-  body {
-    font-family: var(--ff-primary);
-  }
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff-primary);
+  text-align: center;
+  color: var(--clr-primary-100);
+}
 
 .container {
-  padding-inline: 2rem;
-  max-width: 60rem;
+  padding-inline: var(--size-250);
+  max-width: 50rem;
   margin-inline: auto;
 }
 
-
 .header {
-  padding-block: 20px;
+  padding-block-start: var(--size-500);
+  padding-block-end: var(--size-500);
 }
 
 .logo-header {
   margin-inline: auto;
-  margin-block-end: 30px;
+  margin-block-end: var(--size-400);
 }
 
 .nav__list {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: var(--size-200);
   justify-content: center;
   font-weight: var(--fw-bold);
   color: var(--clr-primary-100);
@@ -197,65 +249,175 @@ textarea:not([rows]) {
 
 .nav__link {
   
-  &[aria-current="page"] {
-    text-decoration: underline;
-    text-underline-offset: 6px;
-  }
-
   &:is(:hover, :focus-visible) {
    color: var(--clr-primary-200);
+   text-decoration: underline;
+   text-underline-offset: var(--size-50);
   }
 }
 
-  
+/* INTRO */
+
+.intro__image {
+  --flow-space: var(--size-500);
+}
+
+.tagline {
+  font-weight: var(--fw-medium);
+}
+
+/* SENDESKJEMA */
+
+.sendeskjema {
+  padding-block-start: var(--size-1000);
+  padding-block-end: var(--size-1000);
+}
+
+.sendeskjema__tabell {
+  width: 100%;
+  margin-inline: auto;
+  border-collapse: collapse;
+}
+
+caption {
+  margin-block-start: var(--size-250);
+  padding-block-end: var(--size-200);
+  font-size: 1.25rem;
+  font-weight: var(--fw-medium);
+  font-style: italic;
+  color: var(--clr-dark-brown);
+}
+
+th,
+td {
+  padding: .25em;
+  border: 4px solid var(--clr-dark-brown);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--clr-very-light-blue);
+  color: var(--clr-dark-red);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--clr-almost-white);
+  color: var(--clr-dark-red);
+}
+
+
+/* MENY */
+
+.meny-container {
+  --flow-space: var(--size-600);
+}
+
 .meny {
   text-transform: uppercase;
   background-color: var(--clr-dark-brown);
   color: var(--clr-primary-100);
   color: var(--clr-very-light-blue);
-  padding-block-start: 40px;
-  padding-block-end: 50px;
-  padding-inline: 20px;
-  border-radius: 10px;
+  padding-block-start: var(--size-500);
+  padding-block-end: var(--size-600);
+  padding-inline: var(--size-250);
+  border-radius: var(--size-100);
 }
 
 .meny-heading {
-  text-align: center;
-  margin-block: 40px;
+  margin-block: var(--size-500);
 }
 
 .grid {
   --min-width: 300px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min-width)), 1fr));
-  gap: 40px;
+  gap: var(--size-500);
 }
 
 .meny-kategori-heading {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: var(--size-150);
 }
 
 .rettar {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--size-150);
 }
 
 .rett {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 4px;
+  gap: var(--size-50);
 }
 
 .pris {
   font-weight: var(--fw-medium);
 }
 
+/* BILDER */
+
+.bilder {
+  padding-block-start: var(--size-500);
+}
+
+.galleri {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-500);
+}
+
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--size-500);
+  padding-block-start: var(--size-1000);
+  padding-block-end: var(--size-500);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-250);
+}
+
+.opningstider__list {
+  line-height: 1.8;
+  font-weight: var(--fw-medium);
+}
+
+.closed {
+  color: var(--clr-dark-red);
+  font-weight: var(--fw-extra-bold);
+}
+
 .kontakt-text {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: var(--size-100);
+  font-weight: var(--fw-medium);
 }
+
+.telefon {
+  --flow-space: 6px;
+  letter-spacing: .05em;
+}
+
+
+
+/* @keyframes reveal {
+  from { opacity: 0; clip-path: inset(0% 60% 0% 50%); }
+  to { opacity: 1; clip-path: inset(0% 0% 0% 0%); }
+}
+
+.galleri img {
+  animation: auto linear reveal both;
+  animation-timeline: view();
+  animation-range: entry 25% cover 50%;
+}
+ */
