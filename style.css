@@ -294,6 +294,11 @@ body {
   animation-range: entry 25% cover 50%;
 }
 
+.tagline {
+  max-width: 65ch;
+  margin-inline: auto;
+}
+
 
 /* SENDESKJEMA */
 
