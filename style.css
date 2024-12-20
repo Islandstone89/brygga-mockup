@@ -121,16 +121,23 @@ textarea:not([rows]) {
   /* CUSTOM PROPERTIES */
 
   :root {
+
      /* Primitive properties */
+
+     /* COLORS */
 
      --clr-blue: hsl(216, 61%, 29%);
      --clr-blue-dark: hsl(245, 80%, 19%);
 
-     --clr-dark-red: hsl(350, 73%, 23%);
-     --clr-brown: hsl(28, 27%, 23%);
-     --clr-dark-brown: hsl(36, 5%, 10%);
-     --clr-almost-white: hsl(0, 0%, 91%);
-     --clr-very-light-blue: hsl(202, 58%, 92%);
+     --clr-dark-red: hsl(350, 73%, 20%);
+     --clr-dark-brown: hsl(40, 2%, 10%);
+     --clr-almost-white: hsl(0, 0%, 95%);
+     --clr-very-light-blue: hsl(201, 75%, 97%);
+     --clr-light-pink: hsl(308, 65%, 98%);
+     --clr-white: hsl(0, 0%, 100%);
+
+     
+     /* TYPOGRAPHY */
 
      --ff-sans-serif: 'Inter', system-ui, sans-serif;
 
@@ -138,6 +145,15 @@ textarea:not([rows]) {
      --fw-500: 500;
      --fw-700: 700;
      --fw-800: 800;
+
+     --fs-16px: 1rem;
+     --fs-18px: 1.125rem;
+     --fs-20px: 1.25rem;
+     --fs-24px: 1.5rem;
+     --fs-32px: 2rem;
+
+     
+     /* SPACING */
 
      --size-4px: 4px;
      --size-8px: 8px;
@@ -167,8 +183,21 @@ textarea:not([rows]) {
 
      /* Semantic properties */
 
+     /* COLORS */
+
      --clr-primary-100: var(--clr-blue);
      --clr-primary-200: var(--clr-blue-dark);
+
+     --clr-accent-100: var(--clr-almost-white);
+     --clr-accent-200: var(--clr-very-light-blue);
+     --clr-accent-300: var(--clr-light-pink);
+     --clr-accent-400: var(--clr-dark-red);
+     --clr-accent-500: var(--clr-dark-brown);
+
+     --clr-neutral-100: var(--clr-white);
+
+     
+     /* TYPOGRAPHY */
 
      --ff-primary: var(--ff-sans-serif);
 
@@ -176,6 +205,15 @@ textarea:not([rows]) {
      --fw-medium: var(--fw-500);
      --fw-bold: var(--fw-700);
      --fw-extra-bold: var(--fw-800);
+
+     --fs-200: var(--fs-16px);
+     --fs-225: var(--fs-18px);
+     --fs-250: var(--fs-20px);
+     --fs-300: var(--fs-24px);
+     --fs-400: var(--fs-32px);
+
+    
+     /* SPACING */
 
      --size-50: var(--size-4px);
      --size-100: var(--size-8px);
@@ -230,6 +268,7 @@ body {
   text-align: center;
   color: var(--clr-primary-100);
   font-weight: var(--fw-medium);
+  font-size: clamp(var(--fs-200), 0.91rem + 0.41vw, var(--fs-225));
 }
 
 .container {
@@ -250,7 +289,7 @@ body {
   margin-inline: auto;
   padding-block-start: var(--size-500);
   padding-block-end: var(--size-500);
-  padding-inline: clamp(1.5rem, -2.66rem + 20.83vw, 14rem);
+  padding-inline: clamp(1rem, -3.33rem + 21.66vw, 14rem);
 }
 
 .logo-header {
@@ -265,7 +304,6 @@ body {
   gap: var(--size-200);
   justify-content: center;
   font-weight: var(--fw-bold);
-  color: var(--clr-primary-100);
   text-transform: uppercase;
 }
 
@@ -278,13 +316,27 @@ body {
   }
 }
 
+.section__heading {
+  font-weight: var(--fw-extra-bold);
+  text-transform: uppercase;
+}
+
 
 /* INTRO */
 
 .intro {
   margin-inline: auto;
-  padding-inline: clamp(1.5rem, -2.66rem + 20.83vw, 14rem);
   padding-block-end: var(--size-1000);
+  padding-inline: clamp(1rem, -3.33rem + 21.66vw, 14rem);
+}
+
+.main-heading {
+  font-size: var(--fs-400);
+}
+
+.tagline {
+  max-width: 65ch;
+  margin-inline: auto;
 }
 
 .intro__image {
@@ -295,20 +347,14 @@ body {
   animation-range: entry 25% cover 50%; */
 }
 
-.tagline {
-  max-width: 65ch;
-  margin-inline: auto;
-}
-
-
 /* SENDESKJEMA */
 
 .sendeskjema {
   padding-block-start: var(--size-1000);
   padding-block-end: var(--size-1000);
-  background-color: var(--clr-very-light-blue);
+  background-color: var(--clr-accent-200);
   margin-inline: auto;
-  padding-inline: clamp(1.5rem, -2.66rem + 20.83vw, 14rem);
+  padding-inline: clamp(1rem, -3.33rem + 21.66vw, 14rem);
 }
 
 .sendeskjema__tabell {
@@ -319,26 +365,32 @@ body {
 
 caption {
   margin-block-start: var(--size-250);
-  padding-block-end: var(--size-200);
-  font-size: 1.25rem;
+  padding-block-end: var(--size-300);
+  font-size: var(--fs-250);
   font-style: italic;
-  color: var(--clr-dark-brown);
+  text-decoration: underline;
+  text-underline-offset: var(--size-50);
+  color: var(--clr-accent-400);
+}
+
+.table__heading {
+  color: var(--clr-accent-500);
 }
 
 th,
 td {
-  padding: .25em;
-  border: 4px solid var(--clr-dark-brown);
+  padding: var(--size-50);
+  border: 4px solid var(--clr-accent-500);
 }
 
 tbody tr:nth-child(odd) {
-  background-color: var(--clr-very-light-blue);
-  color: var(--clr-dark-red);
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-accent-400);
 }
 
 tbody tr:nth-child(even) {
-  background-color: var(--clr-almost-white);
-  color: var(--clr-dark-red);
+  background-color: var(--clr-accent-100);
+  color: var(--clr-accent-500);
 }
 
 
@@ -346,12 +398,12 @@ tbody tr:nth-child(even) {
 
 .meny {
   text-transform: uppercase;
-  background-color: var(--clr-dark-brown);
-  color: var(--clr-very-light-blue);
+  background-color: var(--clr-accent-500);
+  color: var(--clr-accent-300);
   padding-block-start: var(--size-1000);
   padding-block-end: var(--size-900);
   margin-inline: auto;
-  padding-inline: clamp(1.5rem, -2.66rem + 20.83vw, 14rem);
+  padding-inline: clamp(1rem, -3.33rem + 21.66vw, 14rem);
 }
 
 .meny-container {
@@ -392,8 +444,10 @@ tbody tr:nth-child(even) {
 
 .bilder {
   padding-block-start: var(--size-900);
+  padding-block-end: var(--size-1100);
   margin-inline: auto;
-  padding-inline: clamp(1.5rem, -2.66rem + 20.83vw, 14rem);
+  padding-inline: clamp(1rem, -3.33rem + 21.66vw, 14rem);
+  background-color: var(--clr-accent-300);
 }
 
 .galleri {
@@ -415,7 +469,7 @@ tbody tr:nth-child(even) {
   padding-block-end: var(--size-500);
   max-width: 80rem;
   margin-inline: auto;
-  padding-inline: clamp(1.5rem, -2.66rem + 20.83vw, 14rem);
+  padding-inline: clamp(1rem, -3.33rem + 21.66vw, 14rem);
 
 }
 
